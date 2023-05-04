@@ -63,12 +63,15 @@ The proposed project aims to develop an **indexer for TON blockchain and ETL pip
 The project consists of three parts:
 
 * **The indexer**
+
     The indexer is a piece of software that connects to the TON node and pulls the transaction data. The indexer will be written in python and could be deployed as a standalone service making it easy for other developers to use the indexer for their own needs.
 
 * **ETL pipeline**
+
     ETL (extract-transform-load) pipeline gets raw data from the indexer, processes the data and stores the data in a usable format. Since that data is ready for analytical queries and API requests. Several other views will be built on top of the data in order to speed up and simplify usage. They include precomputed aggregates for analysts (e.g. amount of active addresses for each timeframe, etc). In order to achieve robustness and efficiency kafka [[27]](https://www.confluent.io/lp/apache-kafka/) and clickhouse [[25]](https://clickhouse.com/) are utilized. The proposed stack is able to guarantee data consistency and stability.
 
 * **API**
+
     API service allows to query data for community needs. The API part includes Grafana dashboards using the same API endpoint to provide a demo and dashboards for analysts. The API service will provide external developers with information about blocks, transactions, addresses, and on-chain metrics
 
 To simplify deployment and future usage, all services will be packed into Docker, with a ready-to-use docker-compose file and deployment documentation provided.
