@@ -4,7 +4,7 @@
 
 The TON blockchain ecosystem has recently undergone significant growth and evolution, with the community building hundreds of custom applications across various domains [[1]](https://ton.app/). In this proposal, we conducted a study of existing applications with a focus on on-chain analytics and identified the main drawbacks of these applications.
 
-After conducting thorough analysis, we propose a solution for **indexing and storing TON blockchain data with an open-source indexer application and ETL pipeline** built using the latest **industry best practices**. We strongly believe that the combination of the optimal tech stack and open-source will result in an enhanced product that better meets the needs of the community in terms of on-chain data analytics and applications utilizing transaction data.
+After conducting thorough analysis, we propose a solution for **indexing and storing TON blockchain data with an open-source indexer application and ETL pipeline** built using the latest **industry best practices**. We strongly believe that **the combination of the optimal tech stack and open-source will result in an enhanced product that better meets the needs of the community** in terms of on-chain data analytics and applications utilizing transaction data.
 
 Our goal is to enable faster and more efficient access to blockchain data, making it suitable for on-chain data analysts, TON developers, risk managers, etc. This will promote transparency and reliability, thereby driving innovation and growth within the TON community.
 
