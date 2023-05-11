@@ -4,7 +4,7 @@
 
 The TON blockchain ecosystem has recently undergone significant growth and evolution, with the community building hundreds of custom applications across various domains [[1]](https://ton.app/). In this proposal, we conducted a study of existing applications with a focus on on-chain analytics and identified the main drawbacks of these applications.
 
-After conducting thorough analysis, we propose a solution for **indexing and storing TON blockchain data with an open-source indexer application and ETL pipeline** built using the latest **industry best practices**. We strongly believe that **the combination of the optimal tech stack and open-source will result in an enhanced product that better meets the needs of the community** in terms of on-chain data analytics and applications utilizing transaction data.
+After conducting thorough analysis, we propose a solution for **indexing and storing TON blockchain data with an open-source indexer application and ETL pipeline** built using the latest **industry best practices**. We strongly believe that **the combination of the optimal tech stack and open-source will result in an enhanced product that better meets the needs of the community** in terms of on-chain data analytics and applications utilizing transaction data. The proposed solution will rely on a dedicated TON node and enable external developers to utilize our API for their specific requirements.
 
 Our goal is to enable faster and more efficient access to blockchain data, making it suitable for on-chain data analysts, TON developers, risk managers, etc. This will promote transparency and reliability, thereby driving innovation and growth within the TON community.
 
@@ -73,8 +73,12 @@ The project consists of three parts:
 * **API**
 
     API service allows to query data for community needs. The API part includes Grafana dashboards using the same API endpoint to provide a demo and dashboards for analysts. The API service will provide external developers with information about blocks, transactions, addresses, and on-chain metrics
+    
+The architecture of the project is also described on a picture:
 
-To simplify deployment and future usage, all services will be packed into Docker, with a ready-to-use docker-compose file and deployment documentation provided.
+![project-architecture](architecture.png)
+    
+The indexer, which will be responsible for indexing the data from TON blockchain and streaming it into kafka, will be made available as an **out-of-the-box solution**. The transaction data will be made **publicly available** through a dataset that can be accessed via API or downloaded as files (e.g. csv). To simplify deployment and future usage, all services will be packed into Docker, with a ready-to-use docker-compose file and deployment documentation provided.
 
 ## Funding
 
